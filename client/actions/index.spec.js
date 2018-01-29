@@ -40,7 +40,6 @@ describe('async', () => {
         const store = mockStore({list: []});
 
         return store.dispatch(actions.fetchPortfolioList()).then(() => {
-            console.log(store.getActions());
             expect(store.getActions()).toEqual(expectedActions);
         });
     });
